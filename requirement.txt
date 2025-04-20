@@ -8,4 +8,3 @@ seaborn
 matplotlib
 numpy
 pandas
-pickle
