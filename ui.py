@@ -41,10 +41,10 @@ input_data = {
     "dti": dti
 }
 
-# Tombol untuk memulai prediksi
+
 if st.button("Predict"):
     try:
-        # Kirim permintaan ke API untuk mendapatkan prediksi
+
         response = requests.post("https://cimb-data-science.onrender.com/predict", json=input_data)
 
         if response.status_code == 200:
@@ -56,7 +56,6 @@ if st.button("Predict"):
                     prediction = "Default" if result['prediction'] == 0 else "No Default"
                     probability = result['probability']
 
-                    # Menampilkan hasil prediksi dan probabilitas
                     st.success(f"Prediction: {prediction}")
                     st.write(f"Probability of Default: {probability:.2f}")
                 else:
