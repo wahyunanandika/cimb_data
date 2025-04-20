@@ -45,7 +45,7 @@ input_data = {
 if st.button("Predict"):
     try:
         # Kirim permintaan ke API untuk mendapatkan prediksi
-        response = requests.post("https://cimb-data.onrender.com/predict", json=input_data)
+        response = requests.post("https://cimb-data-1.onrender.com/predict", json=input_data)
 
         if response.status_code == 200:
             try:
